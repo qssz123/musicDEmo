@@ -1,12 +1,5 @@
-# webmusic
+# musicDemo
 > 网页版本的播放器
-
-## 感谢
-https://github.com/sl1673495/vue-netease-music
-
-## 后端接口
-
-https://binaryify.github.io/NeteaseCloudMusicApi
 
 ## 技术栈
 [vue-cli3](https://cli.vuejs.org/zh/) 创建的项目
