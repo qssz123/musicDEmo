@@ -1,6 +1,6 @@
 <template>
   <div class="index-container">
-    <div class="nav" >
+    <div class="nav" v-if="$store.state.isLogin">
       <ul>
         <li>
           <router-link to="/discovery">
@@ -37,7 +37,7 @@
     <div class="main">
       <router-view></router-view>
     </div>
-    <div class="player">
+    <div class="player" v-if="$store.state.isLogin">
       <audio controls autoplay :src="url" loop></audio>
     </div>
   </div>

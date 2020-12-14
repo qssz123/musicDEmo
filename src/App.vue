@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <top />
+    <top v-if="$store.state.isLogin"/>
     <index />
   </div>
 </template>
