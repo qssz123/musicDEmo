@@ -188,6 +188,9 @@ export default {
   created() {
     this.getData();
   },
+  mounted() {
+    document.querySelector('.mvs-container').style.marginLeft = '200px'
+  },
   watch: {
     area: [
       function() {

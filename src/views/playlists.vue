@@ -147,6 +147,10 @@ export default {
       this.getData();
     }
   },
+  mounted() {
+    document.querySelector('.playlists-container').style.marginLeft = '200px'
+
+  },
   created() {
     this.getData();
   },

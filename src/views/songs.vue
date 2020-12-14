@@ -72,6 +72,10 @@ export default {
     
     };
   },
+  mounted() {
+    document.querySelector('.songs-container').style.marginLeft = '200px'
+
+  },
   methods: {
     toMV(id){
       this.$router.push(`/mv?id=${id}`)

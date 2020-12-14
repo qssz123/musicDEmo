@@ -110,6 +110,10 @@ export default {
       show_pag:false
     };
   },
+  mounted() {
+    document.querySelector('.result-container').style.marginLeft = '200px'
+
+  },
   watch: {
     type: [
       function() {

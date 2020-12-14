@@ -1,5 +1,5 @@
 <template>
-    <div class="home">
+    <div class="home" @keydown="keydown">
         <div class="form">
             <h2 class="login-title">云音乐入口</h2>
             <div class="login-title-input">
@@ -35,9 +35,6 @@
                     if (this.form.password === 'root123') {
                         this.$store.dispatch('SETISLOGIN', true)
                         this.$router.push('/discovery')
-                        document.getElementsByClassName("index-container")[0].style.cssText = "padding-top:60px;" +
-                            "padding-bottom: 60px;"
-                        document.querySelector('.index-container .main').style.padding = '20px'
                     } else {
                         alert('密码错误')
                     }
@@ -45,6 +42,9 @@
                     alert('账户不存在')
                 }
 
+            },
+            keydown(event){
+                event.keyCode===13&&this.sumbit()
             }
         },
         // 侦听器
@@ -52,8 +52,8 @@
         created() {
         },
         mounted() {
-            document.querySelector('.index-container').style.cssText='padding-top:0px;padding-bottom: 0px'
-            document.querySelector('.index-container .main').style.padding = '0px'
+            document.querySelector('.index-container').style.cssText = 'padding-top:0px;padding-bottom: 0px'
+            document.querySelector('.index-container .main').style.padding = '0px';
         }
     }
 </script>

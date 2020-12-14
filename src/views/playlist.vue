@@ -168,6 +168,9 @@ export default {
       total: 0
     };
   },
+  mounted() {
+    document.querySelector('.playlist-container').style.marginLeft = '200px'
+  },
   filters: {},
   created() {
     const { id } = this.$route.query;
