@@ -32,12 +32,27 @@ Vue.filter('formatCount',(count)=>{
     return count;
   }
 })
+router.beforeEach((to, from, next) => {
+  if(to.fullPath!=='/home'){
+    //判断是否登录
+    if (store.state.isLogin) {
+      next()
+    }
+    else {
+      alert('请登录后操作')
+      next({
+        path: '/home'
+      })
+    }
+  }else{
+    next()
+  }
 
+})
 
 
 
 Vue.config.productionTip = false;
-
 new Vue({
   render: h => h(App),
   // 挂载到Vue示例上
